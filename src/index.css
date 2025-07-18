@@ -17,8 +17,8 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 0 0% 100%;
 
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
@@ -26,17 +26,37 @@ All colors MUST be HSL.
     --muted: 210 40% 96.1%;
     --muted-foreground: 215.4 16.3% 46.9%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 217 91% 60%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
     --border: 214.3 31.8% 91.4%;
     --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --ring: 217 91% 60%;
 
     --radius: 0.5rem;
+
+    /* z1ppie magical design tokens */
+    --magic-glow: 217 91% 60%;
+    --magic-glow-soft: 217 91% 85%;
+    --lightning: 45 100% 70%;
+    --data-trail: 197 71% 73%;
+    
+    /* Gradients for magical effects */
+    --gradient-magic: linear-gradient(135deg, hsl(var(--magic-glow)), hsl(var(--data-trail)));
+    --gradient-lightning: linear-gradient(90deg, hsl(var(--lightning)), hsl(var(--magic-glow)));
+    --gradient-hero: linear-gradient(180deg, hsl(var(--background)), hsl(var(--magic-glow-soft) / 0.1));
+    
+    /* Shadows and glows */
+    --shadow-magic: 0 0 30px hsl(var(--magic-glow) / 0.3);
+    --shadow-hero: 0 20px 60px -20px hsl(var(--magic-glow) / 0.4);
+    --glow-intense: 0 0 40px hsl(var(--magic-glow) / 0.6);
+
+    /* Animation variables */
+    --sparkle-duration: 3s;
+    --beam-duration: 2s;
 
     --sidebar-background: 0 0% 98%;
 
