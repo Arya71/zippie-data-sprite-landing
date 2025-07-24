@@ -55,14 +55,19 @@ export const Compare: React.FC<CompareProps> = ({
       onMouseUp={handleMouseUp}
       onMouseLeave={() => setIsDragging(false)}
     >
-      {/* First item (background) */}
-      <div className={cn("absolute inset-0", firstItemClassName)}>
+      {/* First item (left side, clipped) */}
+      <div 
+        className={cn("absolute inset-0", firstItemClassName)}
+        style={{
+          clipPath: `polygon(0% 0%, ${sliderPosition}% 0%, ${sliderPosition}% 100%, 0% 100%)`,
+        }}
+      >
         {firstItem}
       </div>
       
-      {/* Second item (foreground, clipped) */}
+      {/* Second item (right side, clipped) */}
       <div
-        className={cn("absolute inset-0 overflow-hidden", secondItemClassName)}
+        className={cn("absolute inset-0", secondItemClassName)}
         style={{
           clipPath: `polygon(${sliderPosition}% 0%, 100% 0%, 100% 100%, ${sliderPosition}% 100%)`,
         }}
