@@ -97,7 +97,32 @@ export default {
 				'glow-pulse': {
 					'0%, 100%': { opacity: '0.5' },
 					'50%': { opacity: '1' }
-				}
+				},
+				sparkle: {
+					"0%, 100%": { opacity: "0", transform: "scale(0) rotate(0deg)" },
+					"50%": { opacity: "1", transform: "scale(1) rotate(180deg)" },
+				},
+				glitch: {
+					"0%": { transform: "translate(0)" },
+					"20%": { transform: "translate(-2px, 2px)" },
+					"40%": { transform: "translate(-2px, -2px)" },
+					"60%": { transform: "translate(2px, 2px)" },
+					"80%": { transform: "translate(2px, -2px)" },
+					"100%": { transform: "translate(0)" },
+				},
+				"glitch-intense": {
+					"0%": { transform: "translate(0)" },
+					"10%": { transform: "translate(-5px, -5px)" },
+					"20%": { transform: "translate(5px, 5px)" },
+					"30%": { transform: "translate(-5px, 5px)" },
+					"40%": { transform: "translate(5px, -5px)" },
+					"50%": { transform: "translate(-5px, -5px)" },
+					"60%": { transform: "translate(5px, 5px)" },
+					"70%": { transform: "translate(-5px, 5px)" },
+					"80%": { transform: "translate(5px, -5px)" },
+					"90%": { transform: "translate(-5px, -5px)" },
+					"100%": { transform: "translate(0)" },
+				},
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -106,8 +131,10 @@ export default {
 				'beam': 'beam var(--beam-duration) ease-in-out infinite',
 				'typewriter': 'typewriter 2s steps(20) forwards',
 				'float': 'float 3s ease-in-out infinite',
-				'glow-pulse': 'glow-pulse 2s ease-in-out infinite'
-			}
+				'glow-pulse': 'glow-pulse 2s ease-in-out infinite',
+				'glitch': 'glitch 0.3s ease-in-out',
+				'glitch-intense': 'glitch-intense 0.5s ease-in-out',
+			},
 		}
 	},
 	plugins: [require("tailwindcss-animate")],
