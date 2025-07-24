@@ -62,7 +62,7 @@ export const Compare: React.FC<CompareProps> = ({
       
       {/* Second item (foreground, clipped) */}
       <div
-        className={cn("absolute inset-0", secondItemClassName)}
+        className={cn("absolute inset-0 overflow-hidden", secondItemClassName)}
         style={{
           clipPath: `polygon(${sliderPosition}% 0%, 100% 0%, 100% 100%, ${sliderPosition}% 100%)`,
         }}
